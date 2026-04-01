@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class="dark" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nguyễn Anh Đức | The Digital Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#005a63",
+              "primary": "#a1faff",
+              "secondary-dim": "#00d8ec",
+              "surface-container-high": "#002428",
+              "on-error": "#490006",
+              "secondary-fixed-dim": "#00d8ec",
+              "primary-container": "#00f4fe",
+              "secondary-fixed": "#00e7fc",
+              "on-surface": "#b6eff8",
+              "on-error-container": "#ffa8a3",
+              "error-dim": "#d7383b",
+              "surface-bright": "#003237",
+              "tertiary-dim": "#35a5f4",
+              "error": "#ff716c",
+              "surface": "#001113",
+              "on-tertiary-fixed-variant": "#003c61",
+              "surface-container-low": "#00161a",
+              "outline-variant": "#0e4f57",
+              "tertiary-container": "#3daafa",
+              "primary-fixed-dim": "#00e5ee",
+              "on-surface-variant": "#7cb4bd",
+              "on-primary-fixed-variant": "#006266",
+              "surface-dim": "#001113",
+              "on-background": "#b6eff8",
+              "on-tertiary-container": "#002742",
+              "inverse-on-surface": "#215d65",
+              "surface-tint": "#a1faff",
+              "surface-variant": "#002b30",
+              "surface-container-lowest": "#000000",
+              "error-container": "#9f0519",
+              "tertiary-fixed-dim": "#3daafa",
+              "secondary-container": "#006973",
+              "inverse-surface": "#ecfcff",
+              "on-primary-fixed": "#004346",
+              "background": "#001113",
+              "on-primary-container": "#00575b",
+              "tertiary": "#61b7ff",
+              "tertiary-fixed": "#61b7ff",
+              "on-tertiary-fixed": "#00192d",
+              "primary-fixed": "#00f4fe",
+              "on-secondary-container": "#e7fcff",
+              "secondary": "#00e7fc",
+              "outline": "#467e86",
+              "on-primary": "#006165",
+              "inverse-primary": "#006a6e",
+              "surface-container": "#001d21",
+              "on-secondary": "#004f58",
+              "primary-dim": "#00e5ee",
+              "on-tertiary": "#003353",
+              "on-secondary-fixed": "#003a41",
+              "surface-container-highest": "#002b30"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-panel {
+            background: rgba(0, 43, 48, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#001113]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(161,250,255,0.06)] h-20 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full font-['Space_Grotesk'] tracking-tight">
+<div class="text-xl font-bold tracking-tighter text-[#a1faff]" style="">ĐỨC.DEV</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#a1faff] border-b-2 border-[#a1faff] pb-1 transition-all duration-300 ease-in-out" href="#" style="">Về tôi</a>
+<a class="text-[#7cb4bd] hover:text-[#a1faff] transition-colors transition-all duration-300 ease-in-out" href="#skills" style="">Kỹ năng</a>
+<a class="text-[#7cb4bd] hover:text-[#a1faff] transition-colors transition-all duration-300 ease-in-out" href="#projects" style="">Dự án</a>
+<a class="text-[#7cb4bd] hover:text-[#a1faff] transition-colors transition-all duration-300 ease-in-out" href="#contact" style="">Liên hệ</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium hover:bg-primary-dim transition-all duration-300 shadow-[0_0_20px_rgba(161,250,255,0.2)]" style="">Xem dự án</button>
+</div>
+</nav>
+<!-- Custom Terminal Breadcrumb -->
+<div class="fixed bottom-8 right-8 z-40 hidden lg:flex items-center gap-3 bg-surface-container-highest/40 px-4 py-2 rounded-full border border-outline-variant/15 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase" style="">~/portfolio/home/intro.ts</span>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- Background Tonal Glows -->
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-secondary-dim/5 rounded-full blur-[100px]"></div>
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<div class="mb-6 inline-flex items-center gap-3 bg-surface-container-highest px-4 py-1.5 rounded-full">
+<span class="text-primary material-symbols-outlined text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">terminal</span>
+<span class="font-label text-xs tracking-[0.1em] text-on-surface-variant uppercase" style="">Sẵn sàng cho dự án Freelance</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-surface mb-6 leading-[0.9]" style="">
+                        Nguyễn <br>
+<span class="text-primary italic" style="">Anh Đức.</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed" style="">Kiến tạo kiến trúc kỹ thuật số có khả năng mở rộng thông qua mã nguồn tinh gọn và trải nghiệm người dùng có mục đích. Nhà phát triển Fullstack chuyên về các hệ thống backend hiệu năng cao.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-bold text-lg hover:bg-primary-dim transition-all duration-300 flex items-center gap-2" style="">
+                            Xem dự án
+                            <span class="material-symbols-outlined" style="">arrow_forward</span>
+</button>
+<button class="glass-panel text-primary border border-primary/20 px-8 py-4 rounded-md font-bold text-lg hover:bg-surface-variant transition-all duration-300" style="">
+                            Liên hệ tôi
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-4 hidden lg:block relative">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-[0_0_50px_rgba(161,250,255,0.05)] border border-outline-variant/10">
+<img alt="Professional Developer Workspace" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100" data-alt="Modern dark technology workspace with high-end mechanical keyboard, sleek monitor showing code, and neon teal atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHtP8Pitk4FSL_PynFm9D0TIv0R23rcR3897aoSDC0J5lE-YMxl58XUzHugeIF1JM9z0rUPdpAIViPCQSjExzUmKE7vUr-9JeqazFYXocxdGl4xlKh-k6sF0Jpr4h7E078AVKFNJHDjaiv2On5sTGOsWYEl69_SqV6RYRqfdb0Sn1r2dibuHNTdt757RusgsoOeQzNIcxIamcOrGdIgATUMxDOi5V6OZv4Q4RTTNgwFwGDr8NsA4Xn82cMvCKSFJ6papO52LZ8iPGl" style="">
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section (Asymmetrical Layout) -->
+<section class="py-32 bg-surface-container-low relative" id="skills">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-6" style="">Kỹ năng chuyên môn</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed" style="">Bộ công cụ đa dạng được tích lũy qua nhiều năm xây dựng các ứng dụng thực tế. Tập trung vào sự ổn định và tốc độ.</p>
+<div class="p-8 bg-surface-container-highest rounded-xl border border-outline-variant/10">
+<span class="text-primary text-4xl font-black mb-2 block" style="">09+</span>
+<span class="font-label text-sm uppercase tracking-widest text-on-surface-variant" style="">NĂM KINH NGHIỆM</span>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Bento Grid Skills -->
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">javascript</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">JAVASCRIPT<br></span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">php</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">PHP</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">code_blocks</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">PYTHON</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">deployed_code</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">REACT</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">database</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">SQL/NOSQL</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">cloud</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">AWS/GCP</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">api</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">NODE.JS</span>
+</div>
+<div class="p-8 bg-surface-variant rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform" style="">terminal</span>
+<span class="font-label text-sm font-bold tracking-wider" style="">DOCKER</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-32" id="projects">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block" style="">DỰ ÁN TIÊU BIỂU</span>
+<h2 class="font-headline text-5xl font-bold text-on-surface" style="">Môi trường kỹ thuật số.</h2>
+</div>
+<p class="max-w-sm text-on-surface-variant leading-relaxed" style="">Tuyển tập các dự án nơi logic kết hợp với thẩm mỹ để giải quyết các vấn đề phức tạp.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project Card 1 -->
+<div class="group bg-surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-500">
+<div class="h-64 overflow-hidden">
+<img alt="Financial Dashboard Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" data-alt="Complex analytics dashboard with neon charts and dark mode interface, showing financial data and statistics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxkUa_ggArl8rVm6gTzCBG2HKI2u8hPeWz0J4TUYwon2wwQIHDb3b5UL2UV17meXeg9fq7vEdG480K5zPPz-rchrLQ9xsqhwLGadiO-LmFo_m0bNk29-NmLjDCfSGVeoSDpBdGegX591EEXYn6EB_BWgyVpewOULMKdRVzlq5gMkoDc6GqOktH7C-pEp2kzsnmPom2nj_GVFIrMF3i1MbQ8MOVSxF_pmWNW61JrXuEEcchu11gazsWgIOUEI4WjBkP2WRXDrUgj1C0" style="">
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase" style="">FINTECH</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase" style="">REACT</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface" style="">NeoBank Dashboard</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2" style="">Hệ thống theo dõi tài chính thời gian thực with độ trễ cực thấp và bộ lọc hiển thị tùy chỉnh cho các nhà đầu tư tổ chức.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold group-hover:translate-x-2 transition-transform" href="#" style="">Xem chi tiết <span class="material-symbols-outlined" style="">north_east</span></a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group bg-surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-500">
+<div class="h-64 overflow-hidden">
+<img alt="Code Repository Visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" data-alt="High-contrast code editor interface with vibrant syntax highlighting and elegant dark theme background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMAy_u8uMJUjTE5AL8irzJSWVUYVynwlsUEHg4JROSZjeCly_blidy-cNoUvohmi8LDjjlKgkg2owmM1Mc5n3X_LNxTJXSPJQc7_RkPT5aoFkxp9VpIo_rSGTDncrMH1wcQoVcgJan85oV8JIX_O9B3GP5-BDKSZdMggux5IBdc5I_9LdGeXGsREIYctgQLFko9QIiCeIKFAG3kYe_ii7kk-ODB7BT1GcYikcF8tU_-DVc8e3iJPNQeV1ZUOp-eEfDovEYqS-fWLoo" style="">
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase" style="">TOOLING</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase" style="">RUST</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 text-on-surface" style="">Lumina Engine</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2" style="">Lõi xử lý đồ họa hiệu năng cao dành cho các phần mềm sáng tạo, đạt 120FPS trên phần cứng tiêu chuẩn.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold group-hover:translate-x-2 transition-transform" href="#" style="">Xem chi tiết <span class="material-symbols-outlined" style="">north_east</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="contact">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="bg-surface-container-low p-12 md:p-24 rounded-3xl border border-outline-variant/15 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-bold text-on-surface mb-8 tracking-tighter" style="">Sẵn sàng xây dựng <br> tương lai?</h2>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mx-auto mb-12" style="">Tôi luôn sẵn sàng thảo luận về kiến trúc kỹ thuật, các dự án hợp tác hoặc các cơ hội tiềm năng.</p>
+<form class="max-w-md mx-auto mb-12">
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-outline-variant/40 py-4 focus:outline-none focus:border-primary text-on-surface placeholder:text-on-surface-variant transition-all" placeholder="Địa chỉ email của bạn" type="email">
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary hover:scale-110 transition-transform" style="" type="submit">
+<span class="material-symbols-outlined text-3xl" style="">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="flex justify-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label text-sm uppercase tracking-widest" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">public</span> GitHub
+                        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label text-sm uppercase tracking-widest" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">share</span> LinkedIn
+                        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label text-sm uppercase tracking-widest" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">mail</span> Email
+                        </a>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute bottom-[-10%] left-[50%] -translate-x-1/2 w-full h-1/2 bg-primary/5 blur-[150px] rounded-full"></div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-[#000000]">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 border-t border-[#0e4f57]/20 pt-8 font-['Inter'] text-sm tracking-wide">
+<div class="text-lg font-black text-[#a1faff] mb-4 md:mb-0" style="">ĐỨC.DEV</div>
+<div class="text-[#7cb4bd] mb-6 md:mb-0" style="">© 2024 Nguyễn Anh Đức. Built with precision.</div>
+<div class="flex gap-8">
+<a class="text-[#7cb4bd] hover:text-[#a1faff] hover:underline decoration-2 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#" style="">GitHub</a>
+<a class="text-[#7cb4bd] hover:text-[#a1faff] hover:underline decoration-2 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#" style="">LinkedIn</a>
+<a class="text-[#7cb4bd] hover:text-[#a1faff] hover:underline decoration-2 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#" style="">Terminal</a>
+</div>
+</div>
+</footer>
+</body></html>
